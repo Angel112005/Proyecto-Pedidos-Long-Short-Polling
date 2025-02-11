@@ -6,5 +6,5 @@ type PedidoRepository interface {
 	Delete(id int) error
 	Update(pedido *Pedido) error
 	ViewById(id int) (*Pedido, error)
-	ContarPendientes() (int, error) // ✅ Nuevo método para contar pedidos pendientes
+	ContarPendientes() (int, error) 
 }

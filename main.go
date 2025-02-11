@@ -11,9 +11,9 @@ import (
 func main() {
 	r := gin.Default()
 
-	// ✅ Middleware de CORS para permitir solicitudes desde el frontend
+	// Middleware de CORS para permitir solicitudes desde el frontend
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://127.0.0.1:5501"}, // Cambia esto si el frontend tiene otra URL
+		AllowOrigins:     []string{"http://127.0.0.1:5501"}, // Cambiar esto en caso de que el frontend tiene otra URL
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		ExposeHeaders:    []string{"Content-Length"},
@@ -22,11 +22,11 @@ func main() {
 	}))
 
 
-	// Inicializar módulos de pedidos y repartidores
+	// Inicialización de módulos de pedidos y repartidores
 	infrastructurepedido.Init(r)
 	infrastructurerepartidor.Init(r)
 
-	// Ejecutar el servidor en el puerto 3000
+	// Ejecución del servidor en el puerto 3000
 	if err := r.Run(":3000"); err != nil {
 		panic(err)
 	}

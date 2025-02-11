@@ -2,7 +2,6 @@ package applicationpedido
 
 import domainpedido "lab-test.com/module/src/pedidos/domain_pedido"
 
-// domainpedido "mod/src/pedidos/domain_pedido"
 type CreatePedidoUseCase struct {
 	repository domainpedido.PedidoRepository
 }

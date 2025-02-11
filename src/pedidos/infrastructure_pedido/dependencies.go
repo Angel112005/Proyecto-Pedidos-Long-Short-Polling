@@ -2,12 +2,10 @@ package infrastructurepedido
 
 import (
 	"github.com/gin-gonic/gin"
-	// applicationpedido "mod/src/pedidos/application_pedido"
 	applicationpedido "lab-test.com/module/src/pedidos/application_pedido"
 
 )
 
-// Init configura las dependencias de pedidos
 func Init(r *gin.Engine) {
 	ps := NewMySQLPedido()
 	createPedido := applicationpedido.NewCreatePedidoUseCase(ps)

@@ -15,7 +15,7 @@ async function obtenerPedidos() {
     setTimeout(obtenerPedidos, 5000); // Short Polling cada 5 segundos
 }
 
-// ✅ Mostrar pedidos en la interfaz con estilo
+//  Mostrar pedidos en la interfaz
 function mostrarPedidos(pedidos) {
     const pedidosDiv = document.getElementById("pedidos");
     pedidosDiv.innerHTML = "";
@@ -55,7 +55,7 @@ async function obtenerRepartidores() {
     }
 }
 
-// ✅ Mostrar repartidores disponibles en la interfaz con estilo
+// ✅ Mostrar repartidores disponibles en la interfaz 
 function mostrarRepartidores(repartidores) {
     const repartidoresDiv = document.getElementById("repartidores");
     repartidoresDiv.innerHTML = "";

@@ -2,7 +2,6 @@ package infrastructurepedido
 
 import "github.com/gin-gonic/gin"
 
-// RegisterPedidoRoutes registra todas las rutas para los pedidos
 func RegisterPedidoRoutes(r *gin.Engine, pedidoController *PedidoController) {
 	pedidos := r.Group("/pedido")
 	{
